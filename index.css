@@ -1,0 +1,137 @@
+@font-face {
+  font-family: MarrSansCondensed-Regular-App;
+  src: url(MarrSansCondensed-Regular-App.ttf);
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+html, body { height: 100%; overflow: hidden }
+
+body {
+  font-family: MarrSansCondensed-Regular-App;
+  color: black;
+  background-color: white;
+  font-size: 40px;
+  overflow-y: auto;
+}
+
+a {
+  color: red;
+}
+
+div.dragtext {
+  font-family: MarrSansCondensed-Regular-App;
+  color: red;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+div.intro {
+  height: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: justify;
+
+  }
+
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+      }
+
+p { padding: 0 20px; margin-bottom: 1em }
+
+div.imageBox, div.magnificationBox {
+	margin-bottom: 1em;
+	display: inline-block
+}
+div.imageBox {
+    position:relative;
+	left: 20px;
+
+    width: calc(50% - 30px);
+    height: 530px;
+	margin-right: 6px;
+
+    background-color: white;
+    background-size:100% auto;
+    border:1px solid #000;
+}
+
+div.magnificationBox {
+    position: relative;
+    left: 26px;
+
+    width: calc(50% - 30px);
+    height: 530px;
+
+    background-color: white;
+    border: 1px solid #000;
+}
+
+div.slidingPictureBox {
+    position:fixed;
+    top: 50%;
+
+    width: 5%;
+    height: 5%;
+
+    background-color: #00f;
+    border: 1px solid #000;
+
+    -webkit-transition: all 1s;
+	   -moz-transition: all 1s;
+    	-ms-transition: all 1s;
+		 -o-transition: all 1s;
+    		transition: all 1s;
+
+    pointer-events: none;
+}
+
+
+div.noTransition {
+    -webkit-transition: none !important;
+       -moz-transition: none !important;
+    	-ms-transition: none !important;
+   		 -o-transition: none !important;
+    		transition: none !important;
+}
+
+div.selectionBox {
+    position: relative;
+    width: 1px;
+    height: 1px;
+
+    background-color: #fff;
+    border: 1px solid #000;
+
+    opacity: 0.7;
+}
+
+div.minitureStrip { padding: 3px 0 0 21px }
+div.minitureStrip > img {
+	float: left;
+
+	width: calc(100% / 6 - 25px);
+	height: auto;
+  border: 1px solid #000;
+  opacity: 1.0;
+
+	margin-right: 24px;
+	margin-bottom: 24px;
+}
+
+div.minitureStrip > img:hover {
+  opacity: 0.5;
+
+}
+
+div.minitureStrip > img:nth-child(6n) { margin-right: 0 }
