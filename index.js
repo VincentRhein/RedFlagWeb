@@ -215,17 +215,20 @@ $( 'body' ).scroll( repositionZoomBox );
 $( window ).resize( repositionZoomBox );
 
 
-
-
-
 function selectMiniature( ) {
+
+	// Load the proper image file into the magnification box
 	var imagefile = $( this ).attr( 'data-large' );
 	backgroundImageURL = 'url(' +imagefile  + ')';
 	$( 'div.imageBox, div.slidingPictureBox' ).css( 'background-image', 'url(' + imagefile + ')' );
 
+	// Show the proper title
+	var imagetitle = $( this ).attr( 'data-title' );
+	$( '.image-title h3' ).text( imagetitle );
+
+
+	// Jump to the proper verticl offset on the page
+	$( 'html, body' ).animate( { 'scrollTop': '+=' + $( '#GOTO' ).offset( ).top + 'px' }, 1 );
 }
-
-
-
 
 $( '.minitureStrip img' ).click( selectMiniature );

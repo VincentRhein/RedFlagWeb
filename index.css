@@ -135,3 +135,12 @@ div.minitureStrip > img:hover {
 }
 
 div.minitureStrip > img:nth-child(6n) { margin-right: 0 }
+
+
+#GOTO { padding-top: 12px }
+
+.image-title {
+	min-height: 3em;
+	margin-top: -1em;
+	margin-bottom: 0;
+}
